@@ -1,5 +1,8 @@
 package basehelper1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.testng.annotations.Test;
 
 public class ForLoopMethod {
@@ -30,6 +33,14 @@ public class ForLoopMethod {
 			i=i+1;
 		}
 	}
-	public void 
+	
+	@Test
+	public void arrListEx() {
+		List<String> list = new ArrayList<>();
+		list.add("testng");
+		list.add("jira");
+		list.add("conflulence");
+		System.out.println(list);
+	}
 
 }
