@@ -50,7 +50,7 @@ public class ForLoopMethod {
 			if (ch[i]=='p') {
 				System.out.println("found P");
 			}
-		}
+	}
 	}
 	
 	
