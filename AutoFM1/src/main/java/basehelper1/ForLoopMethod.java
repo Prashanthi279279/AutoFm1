@@ -42,5 +42,25 @@ public class ForLoopMethod {
 		list.add("conflulence");
 		System.out.println(list);
 	}
+	public void ex4() {
+		String name = "Githubpraactice";
+		char[] ch = name.toCharArray();
+		int size = ch.length;
+		for (int i=size;i<=0;i++) {
+			if (ch[i]=='p') {
+				System.out.println("found P");
+			}
+		}
+	}
+	
+	
+	public void setEX() {
+		
+		
+	}
+		
+		
+	
+	}	
 
-}
+
