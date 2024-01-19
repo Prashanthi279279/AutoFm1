@@ -1,11 +1,12 @@
 package com.pages;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import com.SeleniumActions.SafeActions;
 import com.objectrepository.RegisterPageLocators;
 
-import dev.failsafe.internal.util.Assert;
+
 
    public class RegisterPage extends SafeActions implements RegisterPageLocators{
 	   

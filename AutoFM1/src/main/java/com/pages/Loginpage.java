@@ -2,14 +2,16 @@ package com.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.testng.Assert;
 import com.SeleniumActions.SafeActions;
 import com.objectrepository.LoginPageLocators;
+import com.objectrepository.ProductPageLocators;
+import com.objectrepository.ProductPageLocators1;
+import com.objectrepository.ProductPageLocators2;
 
 import basehelper1.Base1;
-import dev.failsafe.internal.util.Assert;
 
-     public class Loginpage extends SafeActions implements LoginPageLocators {
+     public class Loginpage extends SafeActions implements LoginPageLocators,ProductPageLocators2,ProductPageLocators1{
 	
 	WebDriver driver;
 
@@ -25,7 +27,7 @@ import dev.failsafe.internal.util.Assert;
 		enterText(INPUT_PASSWORD,password);
         clickElement(BTN_LOGIN);
 
-		Assert.assertTrue(findElement(ICON_CART).isDisplayed());
+		Assert.assertTrue(findElement(NOTIFICATION_CART).isDisplayed());
 
 		System.out.println("Logged in successfully");
 	}
@@ -48,7 +50,7 @@ import dev.failsafe.internal.util.Assert;
 		clickElement(BTN_BOLT_TSHIRT_ADDTOCART);
 		Assert.assertTrue(findElement(BTN_BOLT_TSHIRT_REMOVE).isDisplayed());
 
-		String NotificationCount = findElement(NOFITICAION_CART).getText(); 
+		String NotificationCount = findElement(NOTIFICATION_CART).getText(); 
         Assert.assertEquals(NotificationCount,"2");
 
 		   System.out.println("Notification cart should display two items");
@@ -57,7 +59,7 @@ import dev.failsafe.internal.util.Assert;
 
 	   
      public  void checkOutItems(String firstname,String lastname,String postalcode,String expmsg) {
-          clickElement(NOFITICAION_CART);
+          clickElement(NOTIFICATION_CART);
           clickElement(BUTTON_CHECKOUT);
           enterText(INPUT_FIRSTNAME,firstname);
           enterText(INPUT_LASTNAME,lastname);
