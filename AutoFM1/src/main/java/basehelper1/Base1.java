@@ -6,47 +6,47 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import com.utilities.ConfigureProperties1;
+import com.utilities.ConfigUtil;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 public class Base1 {
-	
-	static WebDriver driver;
-	
-	
+
+	WebDriver driver;
+
+
 	@BeforeMethod
-	public static void launchApplication() throws Exception{
+	public void launchApplication() throws Exception{
+		ConfigUtil props = new ConfigUtil();
 		WebDriverManager.chromedriver().setup();	
 		driver=new ChromeDriver();	
-		String env =ConfigureProperties1.getkeyFromPropertyFile("env1.properties","envToRun");
+		String env =props.getkeyFromPropertyFile("env1.properties","envToRun");
 		if(env.equalsIgnoreCase("qa")) {
-			driver.get(ConfigureProperties1.getkeyFromPropertyFile("env1.properties", "QAUrl"));
+			driver.get(props.getkeyFromPropertyFile("env1.properties", "QAUrl"));
 		}else if(env.equalsIgnoreCase("uat")) {
-			driver.get(ConfigureProperties1.getkeyFromPropertyFile("env1.properties", "UATUrl"));
+			driver.get(props.getkeyFromPropertyFile("env1.properties", "UATUrl"));
 		}else if(env.equalsIgnoreCase("prod")) {
-			driver.get(ConfigureProperties1.getkeyFromPropertyFile("env1.properties", "ProdUrl"));
+			driver.get(props.getkeyFromPropertyFile("env1.properties", "ProdUrl"));
 		}else {
-		//	throw new Exception("please enter either qa or prod or uat to continu");
+			//	throw new Exception("please enter either qa or prod or uat to continu");
 			Assert.fail("please enter either qa or prod or uat to continue");
 		}
 	}
-	
-	
-	public static void enterText(By locator,String value) {
-		driver.findElement(locator).sendKeys(value);
+
+	public void setDriver(WebDriver driver) {
+		this.driver = driver;
 	}
-	
-	
-	public static void clickElement(By locator) {
-		driver.findElement(locator).click();
+
+	public WebDriver getDriver() {
+		return driver;
 	}
-	
+
+
 	@AfterMethod
 	public void closeBrowser()
 	{
 		driver.close();
 	}
-	
+
 
 }
