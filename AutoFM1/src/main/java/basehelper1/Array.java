@@ -61,7 +61,7 @@ public class Array {
     		 System.out.println(word[i]);
     	 }
      }
-	@Test
+	//@Test
 	public void arrlist() {
 		ArrayList<String>list=new ArrayList();
 		list.add("Abhi");
@@ -134,17 +134,20 @@ public class Array {
 	hmap.put(13,"sai duplicate");
 	hmap.put(14,"Abhi");
 	
-	System.out.println("HashMap is ::"+hmap);
+	System.out.println(hmap);
+
+	 for (Map.Entry<Integer, String> entry : hmap.entrySet()) {
+         Integer key = entry.getKey();
+         String value = entry.getValue();
+         System.out.println("value=" + value );
+      
+     }
 			
-	System.out.println(hmap.get(12).equalsIgnoreCase("moHan"));
+	}	
 
-	}		
-	
-		
-		
 
-}	
+  
 	
 		
-	
+}
 

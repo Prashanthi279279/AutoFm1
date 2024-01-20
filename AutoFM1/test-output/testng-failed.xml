@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscripts1.Logintest1">
+      <class name="basehelper1.Array">
         <methods>
-          <include name="closeBrowser"/>
-          <include name="launchApplication"/>
-          <include name="loginTest"/>
+          <include name="hashMapEx"/>
         </methods>
-      </class> <!-- com.testscripts1.Logintest1 -->
+      </class> <!-- basehelper1.Array -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -34,14 +34,14 @@ public class ProductsPage extends  SafeActions implements ProductPageLocators{
 	}
 	
 	
-	public  void  firstItemPriceShouldBeDisplayed() {
+	public  void  firstItemPriceShouldBeDisplayed1() {
 		String price = getText(ITEM_PRICE);
 		Assert.assertTrue(price.contains("29.99"));
 		System.out.println("Price verified");
 
 	}
 
-	public void addTwoItemsToCart () {
+	public void addTwoItemsToCar1t () {
 		clickElement(BTN_BACKPACK_ADDTOCART);
 		Assert.assertTrue(findElement(BTN_BACKPACK_REMOVE).isDisplayed());
 
@@ -53,7 +53,7 @@ public class ProductsPage extends  SafeActions implements ProductPageLocators{
 		System.out.println("Notification cart should display two items");
 
 	}
-	public  void checkOutItems(String firstname,String lastname,String postalcode,String expmsg) {
+	public  void checkOutIte1ms(String firstname,String lastname,String postalcode,String expmsg) {
 		clickElement(NOTIFICATION_CART);
 		clickElement(BUTTON_CHECKOUT);
 		enterText(INPUT_FIRSTNAME,firstname);

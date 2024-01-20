@@ -1,6 +1,5 @@
 package com.testscripts1;
 
-import java.io.IOException;
 import org.testng.annotations.Test;
 import com.pages.LoginPage;
 import com.utilities.ConfigUtil;
@@ -13,7 +12,7 @@ public class LoginTest extends Base1 {
 	
 
 	@Test
-	public void loginTest() throws IOException {
+	public void loginTest() throws Exception {
 		
 		lp = new LoginPage(getDriver());
 		lp.loginToApplication(ConfigUtil.getkeyFromPropertyFile("env1.properties", "username"), 

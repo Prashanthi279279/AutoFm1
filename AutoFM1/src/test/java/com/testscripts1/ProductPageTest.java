@@ -28,9 +28,22 @@ public class ProductPageTest extends Base1 {
 //     pp.getPriceOfProduct();
 //
 //     }
+	
 
-	}
+	 
+
 	
+	@Test(priority=3)
+    public void verifyCheckOutItems() throws Exception {
+        lp = new LoginPage(getDriver());
+        pp = new ProductsPage(getDriver());
+        lp.loginToApplication("standard_user","secret_sauce");
+        pp.checkOutItems("ravi","kumar","5678", "FREE PONY EXPRESS DELIVERY!");
+
+			Thread.sleep(8000);
+
+	}	
 	
+}	
 
 

@@ -19,7 +19,7 @@ public class LoginPage extends SafeActions implements LoginPageLocators,ProductP
 
 	}
 
-	public  void  loginToApplication(String username, String password) throws Exception{
+	public  void loginToApplication(String username, String password) throws Exception{
 		enterText(INPUT_USERNAME,username);
 		enterText(INPUT_PASSWORD,password);
 		clickElement(BTN_LOGIN);

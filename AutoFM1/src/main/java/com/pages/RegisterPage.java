@@ -61,12 +61,13 @@ import com.objectrepository.RegisterPageLocators;
          enterText(INPUT_SURNAME, sname);
          enterText(INPUT_PHONENUMBER, ph);
 
-	 }
 
-    public void ab(int num1, int num2) {
-      int a=num1;
-      final int b=num2;
-      int c= a+b;
+	 }
+ 
+      public void ab(int num1, int num2) {
+          int a=num1;
+          final int b=num2;
+          int c= a+b;
 
     }	
 
