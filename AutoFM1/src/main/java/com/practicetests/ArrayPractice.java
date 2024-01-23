@@ -29,5 +29,11 @@ public class ArrayPractice {
 		
 		
 	}
+	
+	public void arrEx1 {
+		
+		//ArrayList<String> cars+
+		
+	}
 
 }

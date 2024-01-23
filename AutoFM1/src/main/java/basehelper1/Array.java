@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class Array {
 	
-	//@Test
+	@Test
 	public void ex1 () {
 		int[] arr= {1,2,3,4};
 		int size= arr.length;
@@ -109,7 +109,7 @@ public class Array {
 		
 	}
 	
-	//@Test
+	@Test
 	// Alphabatecal order.no duplicates
 	public void treeEX() {
 	Set<String>tset=new TreeSet<>();
@@ -124,8 +124,8 @@ public class Array {
 	
 	}
 	
-	@Test
-	public void hashMapEx() {
+	//@Test
+	/public void hashMapEx() {
 	Map<Integer,String>hmap= new HashMap<>();
 	
 	hmap.put(11,"Abhi");
@@ -134,20 +134,20 @@ public class Array {
 	hmap.put(13,"sai duplicate");
 	hmap.put(14,"Abhi");
 	
-	System.out.println(hmap);
+	//System.out.println(hmap);
 
 	 for (Map.Entry<Integer, String> entry : hmap.entrySet()) {
          Integer key = entry.getKey();
          String value = entry.getValue();
          System.out.println("value=" + value );
-      
-     }
+      }
 			
 	}	
-
+	
+}
 
   
 	
 		
-}
+
 
